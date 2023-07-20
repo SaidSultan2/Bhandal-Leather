@@ -265,50 +265,6 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
-// Remove the entire header.
-	
-add_action( 'init', 'remove_logo_from_header' );
-
-function remove_logo_from_header() {
-	remove_action('genesis_header', 'genesis_do_header');
-	remove_action('genesis_header_right', 'genesis_do_header_right');
-	remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
-	remove_action('genesis_site_description', 'genesis_seo_site_description');
-	remove_action( 'genesis_after_header', 'genesis_do_nav' );
-	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-}
-	
-// functions.php (Child theme)
-
-add_action('genesis_do_nav', 'remove_genesis_primary_nav', 5);
-function remove_genesis_primary_nav() {
-    if (has_nav_menu('primary')) {
-        remove_action('genesis_after_header', 'genesis_do_nav');
-    }
-}
-
-
-	
-
-add_action('genesis_header', 'bl_header');
-
-function bl_header() {
-	get_template_part('template-parts/bl_header');
-}
-
-add_action('genesis_before_header', 'bl_before_header');
-
-function bl_before_header() {
-	get_template_part('template-parts/bl_before_header');
-}
-
-
-add_action('genesis_after_header','bl_side_menu');
-
-function bl_side_menu() {
-	get_template_part('template-parts/bl_side_menu');
-}
 
 
 // Bhandal Funcions
@@ -319,38 +275,8 @@ add_action('wp_enqueue_scripts','bl_styles');
 
 function bl_styles() {
 	// wp_enqueue_style( 'bl_styles', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', true );
-	wp_enqueue_style( 'bl_custom_styles', get_stylesheet_directory_uri() . '/assets/css/main-styles.css', array(), '1.0.0', false );
-	wp_enqueue_style( 'bl_fonts', get_stylesheet_directory_uri() . '/assets/css/fonts.css', array(), '1.0.0', false );
-	wp_enqueue_script( 'bl_scripts', get_stylesheet_directory_uri() . '/assets/js/script.js', array(), '1.0.0', true );
-	wp_enqueue_style( 'font-awesome',"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", array(), '1.0.0', false );
+	wp_enqueue_style( 'bl_custom_styles', get_stylesheet_directory_uri() . '/build/index.css', array(), '1.0.0', false );
 }
-
-
-// Theme Options Page
-
-if (function_exists('acf_add_options_page')) {
-
-    acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-}
-
-
-require_once get_stylesheet_directory() . '/inc/Custom_Nav_Menu.php';
-
-
-
-
 
 
 
