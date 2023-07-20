@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Arvo';
+    src: url(fonts/Arvo-Regular.woff) format('woff');
+    font-weight: 400;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url(fonts/Arvo-Bold.woff) format('woff');
+    font-weight: 800;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Thin.woff) format('woff');
+    font-weight: 100;
+    display: swap;
+}
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Light.woff) format('woff');
+    font-weight: 300;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Regular.woff) format('woff');
+    font-weight: 400;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Medium.woff) format('woff');
+    font-weight: 500;
+    display: swap;
+}
+
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-SemiBold.woff) format('woff');
+    font-weight: 600;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Bold.woff) format('woff');
+    font-weight: 700;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-ExtraBold.woff) format('woff');
+    font-weight: 800;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url(fonts/Chivo-Black.woff) format('woff');
+    font-weight: 800;
+    display: swap;
+}
+
